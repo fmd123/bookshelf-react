@@ -1,7 +1,9 @@
 import React from 'react'
 
 class WishRead extends React.Component {
-  state = {}
+  state = {
+    //contains list of books with wish status
+  }
   render() {
     return(
     < div className = "wish-read-div" >

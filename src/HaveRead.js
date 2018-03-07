@@ -2,7 +2,7 @@ import React from 'react'
 
 class HaveRead extends React.Component {
   state = {
-    //Does this need state? Probably because each list will be updated
+    //contains list of books with have WishRead status
   }
   render (){
     return (

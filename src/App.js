@@ -5,6 +5,7 @@ import * as BooksAPI from './utils/BooksAPI'
 import CurrentRead from './CurrentRead'
 import HaveRead from './HaveRead'
 import WishRead from './WishRead'
+import SearchPage from './SearchPage'
 
 
 
@@ -27,6 +28,7 @@ class BiblioApp extends Component {
         <CurrentRead />
         <HaveRead />
         <WishRead />
+        <SearchPage />
 
       </div>
     );

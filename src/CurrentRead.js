@@ -1,7 +1,9 @@
 import React from 'react'
 
 class CurrentRead extends React.Component {
-  state = {}
+  state = {
+      //contains list of books with current status
+  }
   render() {
     return(
     < div className = "current-read-div" >
