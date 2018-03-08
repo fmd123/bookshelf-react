@@ -11,7 +11,6 @@ class CurrentRead extends React.Component {
         <h2>Books I Am Currently Reading</h2>
       </div>
       <div className = "current-book-list">
-        <p>put current books here</p>
       </div>
     </div>
   )
