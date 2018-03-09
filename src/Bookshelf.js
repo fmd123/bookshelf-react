@@ -15,11 +15,11 @@ class Bookshelf extends Component {
   render (){
     return(
       <div>
-        <hr class="style13"/>
+        <hr className="style13"/>
         <CurrentRead />
-        <hr class="style13"/>
+        <hr className="style13"/>
         <HaveRead />
-        <hr class="style13"/>
+        <hr className="style13"/>
         <WishRead />
     </div>
     )

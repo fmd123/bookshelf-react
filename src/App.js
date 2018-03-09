@@ -30,7 +30,8 @@ class BiblioApp extends Component {
 
         </header>
         {console.log(this.state.books)}
-        {this.state.showSearchPage ? (<SearchPage/>
+
+        {this.state.showSearchPage ? (<SearchPage books = {this.state.books}/>
         ):(
           <Bookshelf />
           )}

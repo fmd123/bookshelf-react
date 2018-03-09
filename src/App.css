@@ -20,6 +20,37 @@ header {
   text-align: center;
 }
 
+.book-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.book-list-item {
+  padding: 20px;
+  background: white;
+  display: flex;
+}
+
+@media (min-width: 500px) {
+  .book-list-item {
+    margin: 20px;
+    border: 1px solid #d5d8df;
+    border-radius: 4px;
+  }
+}
+.book-details {
+  
+}
+.book-cover {
+
+
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex
+}
+
 
 
 /* main page */
