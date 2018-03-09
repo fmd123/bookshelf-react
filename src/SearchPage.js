@@ -48,7 +48,12 @@ clearQuery = ()=> {
 
             <div className='book-details'>
               <p>{book.title}</p>
-              <p>{book.authors}</p>
+              <p>
+              {book.authors.map((author)=>(
+                ` ${author} `
+              ))}
+            </p>
+
               <img className='book-cover' src = {book.imageLinks.thumbnail} alt = {`Cover image for: ${book.title}`}/>
             </div>
           </li>
