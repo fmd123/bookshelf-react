@@ -19,6 +19,11 @@ class BiblioApp extends Component {
     })
   }
 
+  changeShelf (){
+    //how should I make this?
+    //need wishRead haveRead CurrentRead and None states. 
+  }
+
   render() {
     return (
       <div className="App">

@@ -49,7 +49,7 @@ clearQuery = ()=> {
             <div className='book-details'>
               <p>{book.title}</p>
               <p>{book.authors}</p>
-              <img className='book-cover' src = {book.imageLinks.smallThumbnail} alt = {`cover for: ${book.title}`}/>
+              <img className='book-cover' src = {book.imageLinks.thumbnail} alt = {`Cover image for: ${book.title}`}/>
             </div>
           </li>
         ))}
