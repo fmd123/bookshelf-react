@@ -29,8 +29,12 @@ clearQuery = ()=> {
     const { query } = this.state
     let filterBooks
         if(query){
-          const match = new RegExp(escapeRegExp(query), 'i')
-          filterBooks = books.filter((book)=> match.test(book.title) || match.test(book.authors))
+          // const match = new RegExp(escapeRegExp(query), 'i')
+          // filterBooks = books.filter((book)=> match.test(book.title) || match.test(book.authors))
+          filterBooks = books.filter((book)=>{
+            return book.title.includes(query)|| book.authors.includes(query)
+          })
+          //how do I use the search terms file to do this?
         }else{
           filterBooks = books
         }
@@ -53,7 +57,7 @@ clearQuery = ()=> {
         <span>  Now showing: {books.length}</span>
       </div>
       <ul className='book-list'>
-        {books.map((book) => (
+        {filterBooks.map((book) => (
           <li key={book.title} className='book-list-item'>
 
             <div className='book-details'>
@@ -75,6 +79,6 @@ clearQuery = ()=> {
 }
 
 
-
+// http://www.jessespevack.com/blog/2017/1/11/ee5yc9qy8k1i2e5n2v8f0woesvwj1y
 
 export default SearchPage
