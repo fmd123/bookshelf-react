@@ -5,6 +5,10 @@ import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
 
 class SearchPage extends Component {
+  static PropTypes = {
+    books: PropTypes.array.isRequired,
+    onDeleteBook: PropTypes.func.isRequired
+  }
   state = {
     query: ''
     // need piece of state to show results of Search
@@ -26,7 +30,7 @@ clearQuery = ()=> {
     let filterBooks
         if(query){
           const match = new RegExp(escapeRegExp(query), 'i')
-          filterBooks = books.filter((book)=> match.test(book.title))
+          filterBooks = books.filter((book)=> match.test(book.title) || match.test(book.authors))
         }else{
           filterBooks = books
         }
@@ -35,12 +39,18 @@ clearQuery = ()=> {
 
     return(
 
-    < div className = "" >
+    < div className = "list-books" >
     {console.log("SearchPage books: ", books)}
       <div className="search-input-div">
         <h1>Search For a Book</h1>
-        <input className="search-input" placeholder=" Search for a book"></input>
-        <span>Now showing: {books.length}</span>
+        <input
+          className="search-books"
+          placeholder=" Search for a book by title or author"
+          value = {query}
+          onChange = {(event)=>this.updateQuery(event.target.value)}
+        />
+
+        <span>  Now showing: {books.length}</span>
       </div>
       <ul className='book-list'>
         {books.map((book) => (
