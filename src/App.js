@@ -28,7 +28,7 @@ class BiblioApp extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>My Bookshelf
+          <h1>My Reading App
           </h1>
           {/* <Link href = "./Searchpage">Search</Link> */}
           {/* I need a link not an input here. look it up */}

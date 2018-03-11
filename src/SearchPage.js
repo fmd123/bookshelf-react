@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
+import Book from './Book'
 
 class SearchPage extends Component {
   static PropTypes = {
@@ -44,6 +45,7 @@ clearQuery = ()=> {
     return(
 
     < div className = "list-books" >
+    <Book />
     {console.log("SearchPage books: ", books)}
       <div className="search-input-div">
         <h1>Search For a Book</h1>
@@ -61,14 +63,16 @@ clearQuery = ()=> {
           <li key={book.title} className='book-list-item'>
 
             <div className='book-details'>
+              <img className='book-cover' src = {book.imageLinks.thumbnail} alt = {`Cover image for: ${book.title}`}/>
+              <div>
+                <Bookshelf-Changer />
+              </div>
               <p>{book.title}</p>
               <p>
               {book.authors.map((author)=>(
                 ` ${author} `
               ))}
             </p>
-
-              <img className='book-cover' src = {book.imageLinks.thumbnail} alt = {`Cover image for: ${book.title}`}/>
             </div>
           </li>
         ))}
